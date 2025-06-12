@@ -11,7 +11,11 @@ class puntosInteresController extends Controller
      */
     public function index()
     {
-        //
+        //Consulat de clientes en la BDD
+        $intereses=puntosInteres::all();
+
+        //REnder la vista y pasar datos
+        return view('intereses.index',compact('intereses'));
     }
 
     /**
