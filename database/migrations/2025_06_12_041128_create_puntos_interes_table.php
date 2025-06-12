@@ -11,9 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('puntos_interes', function (Blueprint $table) {
+        Schema::create('puntosinteres', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string("nombre");
+            $table->string("descripcion");
+            $table->string("categoria");
+            $table->string("imagen")->nullable();
+            $table->string("latitud");
+            $table->string("longitud");
         });
     }
 
